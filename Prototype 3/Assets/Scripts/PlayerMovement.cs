@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isOnGround = false;
 
+    public bool isGameOver = false;
+
     private Rigidbody2D _playerRB;
 
     private Animator _playerAnim;
@@ -22,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && isOnGround)
+        if(Input.GetKeyDown(KeyCode.Space) && isOnGround && !isGameOver)
         {
             _playerRB.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
@@ -37,6 +39,11 @@ public class PlayerMovement : MonoBehaviour
             {
                 isOnGround = true;
                 _playerAnim.SetBool("IsOnGround", true);
+            }
+
+            else if(other.gameObject.CompareTag("Obsticle"))
+            {
+                isGameOver = true;
             }
         }
     

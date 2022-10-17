@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4335001750496267699}
   m_Layer: 0
   m_Name: Obsticle
-  m_TagString: Untagged
+  m_TagString: Obsticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1356433145
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6d6ccab6d184564439c2c5973e326289, type: 3}
   m_Color: {r: 0.20784315, g: 0.20784315, b: 0.20784315, a: 1}
