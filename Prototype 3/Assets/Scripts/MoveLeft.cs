@@ -6,15 +6,21 @@ public class MoveLeft : MonoBehaviour
 {
     public float movespeed = 10;
 
+    private PlayerMovement _playerScript;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _playerScript = GameObject.Find("Player").GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.left * movespeed * Time.deltaTime);
+        //if(_playerScript.isGameOver == false) can also work for below
+        if(!_playerScript.isGameOver)
+        {
+            transform.Translate(Vector2.left * movespeed * Time.deltaTime);
+        }
     }
 }

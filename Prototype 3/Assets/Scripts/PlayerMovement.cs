@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
             else if(other.gameObject.CompareTag("Obsticle"))
             {
                 isGameOver = true;
+                _playerAnim.SetTrigger("IsHit");
             }
         }
     
